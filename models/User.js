@@ -16,7 +16,15 @@ const UserSchema = new mongoose.Schema({
     },
     avatar: {
         type: String
-    }
+    }, 
+    friends: [
+        {
+            user: {
+                type: Schema.Types.ObjectId,
+                ref: 'users'
+            }
+        }
+    ]
 })
 
 module.exports = UserSchema
