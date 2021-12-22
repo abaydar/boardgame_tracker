@@ -24,6 +24,14 @@ const UserSchema = new mongoose.Schema({
                 ref: 'users'
             }
         }
+    ], 
+    games: [
+        {
+            game: {
+                type: Schema.Types.ObjectId,
+                ref: 'games'
+            }
+        }
     ]
 })
 
